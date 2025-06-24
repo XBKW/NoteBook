@@ -1,1 +1,16 @@
 site_name: 咸不可闻的笔记本
+site_url: https://xbkw.github.io/NoteBook/
+repo_name: XBKW/NoteBook
+repo_url: https://github.com/XBKW/NoteBook
+edit_uri: tree/master/docs
+site_description: 咸不可闻（XBKW）的笔记本
+
+theme:
+  name: material
+  language: zh
+
+nav:
+  - Home:
+    - index.md
+  - TODO:
+    - TODO.md
