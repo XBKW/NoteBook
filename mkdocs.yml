@@ -8,9 +8,58 @@ site_description: 咸不可闻（XBKW）的笔记本
 theme:
   name: material
   language: zh
+  #custom_dir: overrides
+  favicon:
+  icon:
+    logo: material/Wallet-outline
+    repo: fontawesome/brands/github
 
+  palette:
+
+      # Palette toggle for automatic mode
+    - media: "(prefers-color-scheme)"
+      primary: grey
+      accent: brown
+      toggle:
+        icon: material/weather-sunset-down
+        name: Switch to light mode
+      # Palette toggle for light mode
+    - media: "(prefers-color-scheme: light)"
+      primary: grey
+      accent: brown
+      scheme: default
+      toggle:
+        icon: material/weather-sunny 
+        name: Light mode
+      # Palette toggle for dark mode
+    - media: "(prefers-color-scheme: dark)"
+      primary: black
+      accent: brown
+      scheme: slate
+      toggle:
+        icon: material/weather-night
+        name: Dark mode
+
+  font:
+    text: LXGW WenKai Screen GB Screen # Share Tech
+    code: JetBrains Mono
+  features:
+    - content.code.annotate
+    - content.code.copy # 代码块一键复制
+    #- navigation.instant # 点击内部链接时，不用全部刷新页面
+    - navigation.tracking # 在url中使用标题定位锚点
+    - navigation.tabs # 顶部显示导航顶层nav（也就是第一个节点）
+    - navigation.tabs.sticky # 滚动是隐藏顶部nav，需要配合navigation.tabs使用
+    - navigation.sections # nav节点缩进
+    #- navigation.expand # 不折叠左侧nav节点
+    - navigation.indexes # 指定节点index pages ，跟instant不兼容
+    - navigation.top # 一键回顶部
+    - search.suggest   # 搜索输入一些字母时推荐补全整个单词
+    - search.highlight   # 搜索出的文章关键词加入高亮
 nav:
   - Home:
     - index.md
+  - 文献阅读:
+    - coming.md
   - TODO:
     - todo.md
