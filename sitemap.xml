@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-         <loc>https://xbkw.github.io/NoteBook/</loc>
-         <lastmod>2025-06-29</lastmod>
+         <loc>https://xbkw.github.io/NoteBook/index.html</loc>
+         <lastmod>2025-07-02</lastmod>
     </url>
     <url>
-         <loc>https://xbkw.github.io/NoteBook/coming/</loc>
-         <lastmod>2025-06-29</lastmod>
+         <loc>https://xbkw.github.io/NoteBook/coming.html</loc>
+         <lastmod>2025-07-02</lastmod>
     </url>
     <url>
-         <loc>https://xbkw.github.io/NoteBook/todo/</loc>
-         <lastmod>2025-06-29</lastmod>
+         <loc>https://xbkw.github.io/NoteBook/todo.html</loc>
+         <lastmod>2025-07-02</lastmod>
     </url>
 </urlset>
