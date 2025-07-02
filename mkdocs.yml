@@ -63,3 +63,59 @@ nav:
     - coming.md
   - TODO:
     - todo.md
+
+extra:
+  # tags:
+  #   HTML5: html
+  #   JavaScript: js
+  #   CSS: css
+  generator: false  #删除页脚显示“使用 MkDocs 材料制造”
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/XBKW
+    - icon: fontawesome/brands/bilibili
+      link: https://space.bilibili.com/176742470?spm_id_from=333.337.0.0
+    - icon: fontawesome/solid/paper-plane
+      link: mailto:<1209124158@qq.com> #联系方式
+
+markdown_extensions:
+  - abbr
+  - attr_list
+  - admonition
+  - def_list
+  - footnotes
+  - md_in_html
+  - meta # 支持Markdown文件上方自定义标题标签等
+  - pymdownx.caret
+  - pymdownx.betterem
+  - pymdownx.critic
+  - pymdownx.details
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.snippets
+  - pymdownx.smartsymbols
+  - pymdownx.tilde
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format # 代码块高亮插件
+  - pymdownx.arithmatex:  # latex支持
+      generic: true
+  - toc:
+      permalink: true # 固定标题位置为当前位置
+  - pymdownx.highlight: # 代码块高亮
+      anchor_linenums: true
+      linenums: true # 显示行号
+      # auto_title: true # 显示编程语言名称
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - markdown.extensions.toc:
+      slugify: !!python/object/apply:pymdownx.slugs.slugify {kwds: {case: lower}}
+      permalink: "\ue157"
