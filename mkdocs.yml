@@ -46,27 +46,34 @@ theme:
   features:
     - content.code.annotate
     - content.code.copy # 代码块一键复制
-    - navigation.instant # 点击内部链接时，不用全部刷新页面
+    # - navigation.instant # 点击内部链接时，不用全部刷新页面
     - navigation.instant.prefetch # 即时预取，当用户将鼠标悬停在链接上时，它将开始获取页面。
     - navigation.instant.progress # 进度指示器
     - navigation.tracking # 在url中使用标题定位锚点
     - navigation.tabs # 顶部显示导航顶层nav（也就是第一个节点）
-    #- navigation.tabs.sticky # 滚动不隐藏顶部nav，需要配合navigation.tabs使用
-    - navigation.sections # nav节点缩进
+    # - navigation.tabs.sticky # 滚动不隐藏顶部nav，需要配合navigation.tabs使用
+    # #- navigation.sections # nav节点缩进
+    - navigation.prune
     - navigation.path #导航路径痕迹导航
     - navigation.footer #页脚可以包含指向当前页面的上一页和下一页的链接
-    #- navigation.expand # 不折叠左侧nav节点
-    #- navigation.indexes # 指定节点index pages ，跟instant不兼容
+    # #- navigation.expand # 不折叠左侧nav节点
+    - navigation.indexes # 指定节点index pages ，跟instant不兼容
     - navigation.top # 一键回顶部
     - search.suggest   # 搜索输入一些字母时推荐补全整个单词
     - search.highlight   # 搜索出的文章关键词加入高亮
+
 nav:
   - 主页:
     - index.md
   - 文献阅读:
     - coming.md
+  - 老饕食记:
+    - taster/index.md
+    - 吃在北交: 
+      - coming.md
   - 待办:
     - todo.md
+  
 
 copyright: Copyright &copy; 2025 XBKW
 

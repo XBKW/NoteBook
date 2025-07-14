@@ -17,3 +17,4 @@
 - https://facelessuser.github.io/pymdown-extensions/extensions/arithmatex/
 - https://github.com/TonyCrane/note/
 - https://github.com/IsshikiHugh/notebook
+- https://github.com/Wcowin/Mkdocs-Wcowin
