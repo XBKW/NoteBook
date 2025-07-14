@@ -65,12 +65,15 @@ theme:
 nav:
   - 主页:
     - index.md
+
   - 文献阅读:
-    - coming.md
+    - paper/index.md
+
   - 老饕食记:
     - taster/index.md
     - 吃在北交: 
       - coming.md
+
   - 待办:
     - todo.md
   
