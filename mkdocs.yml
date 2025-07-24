@@ -7,6 +7,7 @@ site_description: 咸不可闻（XBKW）的笔记本
 
 theme:
   name: material
+  custom_dir: docs/overrides #覆写路径
   language: zh
   #custom_dir: overrides
   favicon:
@@ -15,30 +16,29 @@ theme:
     repo: fontawesome/brands/github
 
   palette:
-
       # Palette toggle for automatic mode
     - media: "(prefers-color-scheme)"
-      primary: grey
-      accent: brown
+      primary: deep blue
+      accent: deep orange
       toggle:
         icon: material/weather-sunset-down
-        name: Switch to light mode
+        name: 浏览器默认模式
       # Palette toggle for light mode
     - media: "(prefers-color-scheme: light)"
-      primary: grey
-      accent: brown
+      primary: deep blue
+      accent: deep orange
       scheme: default
       toggle:
-        icon: material/weather-sunny 
-        name: Light mode
+        icon: material/weather-night 
+        name: 切换到深色模式
       # Palette toggle for dark mode
     - media: "(prefers-color-scheme: dark)"
-      primary: black
-      accent: brown
+      primary: dark
+      accent: amber
       scheme: slate
       toggle:
-        icon: material/weather-night
-        name: Dark mode
+        icon: material/weather-sunny
+        name: 切换到浅色模式
 
   font:
     text: LXGW WenKai Screen GB Screen # Share Tech
@@ -104,11 +104,17 @@ extra:
 #            Thanks for your feedback! Help us improve this page by
 #            using our <a href="https://marketingplatform.google.com/about/analytics/" target="_blank" rel="noopener">feedback form</a>.
 
+extra_css:
+  - stylesheets/custom.css
+
 plugins:
   # - glightbox
   - search
   - offline
-
+  # - git-revision-date-localized:
+  #     type: timeago
+  # - minify:
+  #     minify_html: true
 
 markdown_extensions:
   - abbr
@@ -150,5 +156,6 @@ markdown_extensions:
       custom_checkbox: true
   - markdown.extensions.toc:
       slugify: !!python/object/apply:pymdownx.slugs.slugify {kwds: {case: lower}}
-      permalink: "\ue157"
+      permalink: true
+  - attr_list
 
