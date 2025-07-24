@@ -1,0 +1,243 @@
+/* ===== 全局样式 ===== */
+:root {
+  --md-primary-fg-color: #2c3e50;
+  --md-primary-fg-color--light: #3a5169;
+  --md-primary-fg-color--dark: #1e2b38;
+  --md-accent-fg-color: #ff6b42;
+  --md-typeset-a-color: #ff6b42;
+  
+  /* 新增变量 */
+  --footer-bg-color: #121721;
+  --footer-text-color: #e0e0e0;
+  --footer-border-color: #1e2430;
+}
+
+[data-md-color-scheme="slate"] {
+  --card-bg-color: #1e2227;
+  --card-shadow-color: rgba(0,0,0,0.2);
+  --text-color: #e0e0e0;
+  --border-color: #2a2f36;
+  --table-header-bg: #1a1e23;
+  --table-row-bg: #1d2126;
+  
+  /* 顶部导航栏加深 */
+  --md-primary-fg-color: #121721;
+  --md-primary-fg-color--light: #1a2435;
+  --md-primary-fg-color--dark: #0d1118;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-weight: 300;
+  line-height: 1.7;
+  color: var(--text-color);
+  transition: background 0.3s ease;
+}
+
+/* ===== 顶部导航栏加深 ===== */
+.md-header {
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  height: 2.4rem;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* 浅色模式顶部导航栏 */
+.md-header[data-md-state=shadow] {
+  background-color: var(--md-primary-fg-color);
+}
+
+/* 深色模式顶部导航栏 */
+[data-md-color-scheme="slate"] .md-header {
+  background-color: #0d1118 !important;
+  border-bottom: 1px solid #0a0d12;
+}
+
+.md-tabs {
+  background: linear-gradient(90deg, #2c3e50, #3a5169);
+}
+
+[data-md-color-scheme="slate"] .md-tabs {
+  background: linear-gradient(90deg, #0d1118, #121721);
+  border-top: 1px solid #0a0d12;
+  border-bottom: 1px solid #0a0d12;
+}
+
+/* ===== 内容区 ===== */
+.md-main__inner {
+  padding-top: 1.5rem;
+}
+
+.md-content {
+  background: var(--card-bg-color);
+  border-radius: 12px;
+  box-shadow: 0 5px 20px var(--card-shadow-color);
+  padding: 2.5rem;
+  margin-bottom: 2rem;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+@media (max-width: 76.1875em) {
+  .md-content {
+    padding: 1.5rem;
+    border-radius: 0;
+  }
+}
+
+/* ===== 统一页脚样式 ===== */
+.md-footer {
+  background: var(--footer-bg-color);
+  color: var(--footer-text-color);
+  padding: 1.5rem 0;
+  margin-top: 3rem;
+}
+
+.md-footer-meta {
+  background: transparent;
+  border-top: 1px solid var(--footer-border-color);
+}
+
+.md-footer-meta .md-copyright {
+  color: #a0aec0;
+}
+
+.md-footer-meta .md-copyright a {
+  color: var(--md-accent-fg-color);
+  transition: opacity 0.2s ease;
+}
+
+.md-footer-meta .md-copyright a:hover {
+  opacity: 0.8;
+}
+
+/* ===== 标题样式 ===== */
+h1 {
+  font-weight: 600;
+  color: var(--md-primary-fg-color);
+  border-bottom: 2px solid var(--border-color);
+  padding-bottom: 0.8rem;
+  margin-bottom: 1.5rem;
+  transition: border-color 0.3s ease;
+}
+
+[data-md-color-scheme="slate"] h1 {
+  color: #e0e0e0;
+}
+
+h2 {
+  position: relative;
+  padding-left: 1.2rem;
+  margin-top: 2.5rem;
+}
+
+h2:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.5rem;
+  height: 1.5rem;
+  width: 5px;
+  background: var(--md-accent-fg-color);
+  border-radius: 3px;
+}
+
+/* ===== 深色模式特定修复 ===== */
+[data-md-color-scheme="slate"] {
+  .md-content {
+    background: var(--md-default-bg-color--light);
+  }
+  
+  pre > code {
+    background-color: var(--md-code-bg-color);
+  }
+  
+  .md-typeset table:not([class]) td {
+    color: var(--md-typeset-color);
+  }
+}
+
+/* ===== 导航栏项目悬停效果 ===== */
+.md-tabs__link {
+  transition: all 0.2s ease;
+}
+
+.md-tabs__link:hover {
+  background-color: rgba(255,255,255,0.1);
+  transform: translateY(-2px);
+}
+
+/* ===== 侧边栏深色模式适配 ===== */
+/* 修复所有侧边栏文本颜色 */
+[data-md-color-scheme="slate"] .md-nav__title,
+[data-md-color-scheme="slate"] .md-nav__link,
+[data-md-color-scheme="slate"] .md-nav__item .md-nav__link--active,
+[data-md-color-scheme="slate"] .md-nav__item--section > .md-nav__link {
+  color: #e0e0e0 !important;
+}
+
+/* 侧边栏标题样式 */
+[data-md-color-scheme="slate"] .md-nav__title {
+  background-color: #0d1118;
+  border-bottom: 1px solid #1a1f29;
+  padding: 1rem 1.2rem;
+  font-weight: 600;
+  color: white !important;
+}
+
+/* 侧边栏链接悬停效果 */
+[data-md-color-scheme="slate"] .md-nav__link:hover {
+  color: var(--md-accent-fg-color) !important;
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+/* 当前活动链接样式 */
+[data-md-color-scheme="slate"] .md-nav__link--active {
+  color: var(--md-accent-fg-color) !important;
+  background-color: rgba(255, 107, 66, 0.1);
+  border-left: 3px solid var(--md-accent-fg-color);
+}
+
+/* 二级菜单缩进样式 */
+[data-md-color-scheme="slate"] .md-nav--secondary .md-nav__title {
+  background-color: #121721;
+  border-bottom: 1px solid #1e2430;
+}
+
+/* 侧边栏图标颜色 */
+[data-md-color-scheme="slate"] .md-nav__item .md-icon {
+  color: #a0aec0;
+}
+
+/* 侧边栏分隔线 */
+[data-md-color-scheme="slate"] .md-nav__divider {
+  background-color: #1e2430;
+}
+
+/* 侧边栏搜索框 */
+[data-md-color-scheme="slate"] .md-search__input {
+  background-color: #121721;
+  color: #e0e0e0;
+  border: 1px solid #1e2430;
+}
+
+[data-md-color-scheme="slate"] .md-search__icon {
+  color: #a0aec0;
+}
+
+/* 侧边栏目录树样式 */
+[data-md-color-scheme="slate"] .md-nav__list {
+  padding-left: 0.5rem;
+}
+
+[data-md-color-scheme="slate"] .md-nav__item {
+  margin-bottom: 0.2rem;
+}
+
+/* 侧边栏当前页指示器 */
+[data-md-color-scheme="slate"] .md-nav__item--active > .md-nav__link {
+  font-weight: 600;
+}
+
+
