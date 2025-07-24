@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block config %}
+  {{ super() }}
+  {% if page and page.meta and page.meta.mode %}
+    {% set feature = config.theme.feature %}
+    {% set page_mode = page.meta.mode %}
+  {% endif %}
+{% endblock %}
+
+{% block extrahead %}
+  {{ super() }}
+  <style>
+    :root {
+      /* 浅色模式顶部颜色 */
+      --md-primary-fg-color:        #2c3e50;
+      --md-primary-fg-color--light: #3a5169;
+      --md-primary-fg-color--dark:  #1e2b38;
+    }
+    
+    [data-md-color-scheme="slate"] {
+      /* 深色模式顶部加深颜色 */
+      --md-primary-fg-color:        #0d1118;
+      --md-primary-fg-color--light: #121721;
+      --md-primary-fg-color--dark:  #0a0d12;
+    }
+  </style>
+{% endblock %}
